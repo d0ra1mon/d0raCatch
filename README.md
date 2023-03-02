@@ -3,10 +3,10 @@ Small and pocket-sized, a phrase that is completely misunderstood if taken out o
 <p align="center"><img src="/image/1.jpg"></p>
 
 ## For the creation of this project you will need:
-- Wemos d1 mini
-- sd module
-- m6 gps module
-- 128x64 display
+- [Wemos d1 mini](https://www.amazon.it/AZDelivery-D1-ESP8266-12E-gratuito-compatibile/dp/B0754N794H/ref=sr_1_7?keywords=wemos+d1+mini&qid=1677771028&sprefix=wemos+d%2Caps%2C177&sr=8-7)
+- [SD module](https://www.amazon.it/AZDelivery-Reader-Memory-Shield-Arduino/dp/B06X1DX5WS/ref=sr_1_5?keywords=arduino+sd+card+module&qid=1677771051&sprefix=sd+module+a%2Caps%2C164&sr=8-5)
+- [M6 gps module](https://www.amazon.it/Aideepen-GY-GPS6MV2-Posizione-Antenna-Controller/dp/B08CZSL193/ref=sr_1_6?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1RTDJSP7UCFB8&keywords=gps+arduino&qid=1677771070&sprefix=gps+arduino%2Caps%2C163&sr=8-6)
+- [Display 128x64](https://www.amazon.it/gp/product/B07J2QWF43/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
 
 ## Pay attention
 In the file WifiScan.ino you will find the instructions for the connections, pay special attention to the connection of the gps module: the rx pin is connected to pin D4(gpio 2) but in the .ino file the connection to pin D3(gpio 0) is indicated, same for the Tx pin, it is connected to pin D3(gpio 0) but the connection to pin D4(gpio 2) is indicated. Pay attention!
