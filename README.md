@@ -1,5 +1,5 @@
-# d0raCarch - War Driving device
-Small and pocket-sized, a phrase that is completely misunderstood if taken out of context, I am talking about a wardriving device.
+# d0raCarch - Wardriving device
+Small and pocket-sized, a phrase that is completely misunderstood if taken out of context, I am talking about a Wardriving device.
 <p align="center"><img src="/image/1.jpg"></p>
 
 For the creation of this project you will need:
