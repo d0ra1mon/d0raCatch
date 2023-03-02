@@ -2,7 +2,7 @@
 Small and pocket-sized, a phrase that is completely misunderstood if taken out of context, I am talking about a Wardriving device.
 <p align="center"><img src="/image/1.jpg"></p>
 
-###### For the creation of this project you will need:
+## For the creation of this project you will need:
 - Wemos d1 mini
 - sd module
 - m6 gps module
