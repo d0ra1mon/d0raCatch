@@ -13,7 +13,8 @@ Small and pocket-sized, a phrase that is completely misunderstood if taken out o
 In the file WifiScan.ino you will find the instructions for the connections, pay special attention to the connection of the gps module: the rx pin is connected to pin D4(gpio 2) but in the .ino file the connection to pin D3(gpio 0) is indicated, same for the Tx pin, it is connected to pin D3(gpio 0) but the connection to pin D4(gpio 2) is indicated. Pay attention!
 
 ## How it works
-It essentially scans the networks around you via the Wemos, obtains the position via the GPS and stores them in .csv format on an sd card via the sd module. Please note that it does not check for duplicates so you will have to remove them later via a python script. In order to be able to view the 2d map of the networks found, you should use this site: [Map](https://www.gpsvisualizer.com/)
+It essentially scans the networks around you via the Wemos, obtains the position via the GPS and stores them in .csv format on an sd card.
+Please note that it does not check for duplicates so you will have to remove them later via a python script. In order to be able to view the 2d map of the networks found, you should use this site: [Map](https://www.gpsvisualizer.com/)
 <p align="center"><img src="/image/map.gif"></p>
 
 ## Assembly
