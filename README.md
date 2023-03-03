@@ -23,7 +23,7 @@ Below are some pictures of the device without a case, so that you can understand
 <p align="center"><img src="/image/6.jpg"></p>
 
 ## 3D Case
-Finally, in the 3d folder you will find the two files for 3d printing of the case.
+Finally, in the 3D folder you will find the two files for 3d printing of the case.
 <p align="center"><img src="/image/7.png"></p>
 <p align="center"><img src="/image/8.png"></p>
 
