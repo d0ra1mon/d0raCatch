@@ -1,5 +1,8 @@
+<p align="center">
+  ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white) />
+</p>
+
 # d0raCarch - Wardriving device
-![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)
 Small and pocket-sized, a phrase that is completely misunderstood if taken out of context, I am talking about a Wardriving device.
 <p align="center"><img src="/image/1.jpg"></p>
 <p align="center"><img src="/image/3.jpg"></p>
