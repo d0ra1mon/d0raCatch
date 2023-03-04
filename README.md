@@ -1,6 +1,8 @@
- # d0raCarch - Wardriving device
-![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+<p align="center">
+ <img alt="Arduino" src="[https://img.shields.io/badge/contributions-welcome-brightgreen?style=for-the-badge&labelColor=black&logo=github](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)">
+</p>
 
+# d0raCarch - Wardriving device
 Small and pocket-sized, a phrase that is completely misunderstood if taken out of context, I am talking about a Wardriving device.
 <p align="center"><img src="/image/1.jpg"></p>
 <p align="center"><img src="/image/3.jpg"></p>
