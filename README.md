@@ -15,7 +15,10 @@ Small and pocket-sized, a phrase that is completely misunderstood if taken out o
 - [Display 128x64](https://www.amazon.it/gp/product/B07J2QWF43/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
 
 ## Pay attention
-In the file WifiScan.ino you will find the instructions for the connections, pay special attention to the connection of the gps module: the rx pin is connected to pin D4(gpio 2) but in the .ino file the connection to pin D3(gpio 0) is indicated, same for the Tx pin, it is connected to pin D3(gpio 0) but the connection to pin D4(gpio 2) is indicated. Pay attention!
+In the file WifiScan.ino you will find the instructions for the connections, pay special attention to the connection of the gps module: the rx pin is connected to pin D4(gpio 2) but in the .ino file the connection to pin D3(gpio 0) is indicated, same for the Tx pin, it is connected to pin D3(gpio 0) but the connection to pin D4(gpio 2) is indicated. 
+
+Remember, after connected all pin and completed the assembly you should go out and power on the device, after 5/10 minutes if all connection is ok the gps should blink.
+Pay attention!
 
 ## How it works
 It essentially scans the networks around you via the Wemos, obtains the position via the GPS and stores them in .csv format on an sd card.
