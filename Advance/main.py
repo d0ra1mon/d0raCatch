@@ -5,7 +5,7 @@ try:
 except ImportError:
     import os
     print("Installing dependencies...")
-    os.system("pip install pandas")
+    os.system("pip3 install pandas")
 
 i = input("Do you want to merge different file and drop duplicates? (y/n)")
 if i == 'y':
@@ -22,8 +22,11 @@ if i == 'y':
     df.to_csv('/home/'+user+'/Desktop/d0raCatch/Advance/Done/Wifi_merged.csv', index=False)
     print("Files merged")
 else:
+    print("Move all file to merge into ToClean folder then press ENTER")
+    input()
     file = input("Enter file name: ")
-    input_data = pd.read_csv(file)
-    filtered_data = input_data.drop_duplicates(subset=['MAC'])
     user = getpass.getuser()
+    input_data = pd.read_csv("/home/"+user+"/Desktop/d0raCatch/Advance/ToClean/"+file)
+    filtered_data = input_data.drop_duplicates(subset=['MAC'])
     filtered_data.to_csv("/home/"+user+"/Desktop/d0raCatch/Advance/Done/C_"+file, index=False)
+    print("Files cleaned saved on /home/"+user+"/Desktop/d0raCatch/Advance/Done/")
