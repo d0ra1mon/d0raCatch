@@ -23,8 +23,8 @@ It essentially scans the networks around you via the Wemos, obtains the position
 To drop duplicates you should use the file main.py into Advance folder, this script can:
 - Get all file to merge from ToMerge folder, check and drop all duplicates row and save the final result into Done folder.
 - Get the file to clean from ToClean folder, check and drop all duplicates and save the final result into Done folder.
+- Generate the 2D Map
 
-In order to be able to view the 2d map of the networks found, you should use this site: [Map](https://www.gpsvisualizer.com/)
 <p align="center"><img src="/image/map.gif"></p>
 
 ## Assembly
