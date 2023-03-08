@@ -5,10 +5,12 @@ try:
     import os
     from datetime import *
     import time
+    import folium
 except ImportError:
     import os
     print("Installing dependencies...")
     os.system("pip3 install pandas")
+    os.system("pip3 install folium")
 
 today = date.today()
 now = datetime.now()
@@ -34,8 +36,22 @@ if i == 'y':
         os.system("cp /home/"+user+"/Desktop/d0raCatch/Advance/Done/Wifi_merged_"+real_date+".csv /home/"+user+"/Desktop/d0raCatch/Advance/ToClean/")
         input_data = pd.read_csv("/home/"+user+"/Desktop/d0raCatch/Advance/Done/Wifi_merged_"+real_date+".csv")
         filtered_data = input_data.drop_duplicates(subset=['MAC'])
-        filtered_data.to_csv("/home/"+user+"/Desktop/d0raCatch/Advance/Done/Cleaned_Wifi_merged_"+real_date, index=False)
+        filtered_data.to_csv("/home/"+user+"/Desktop/d0raCatch/Advance/Done/Cleaned_Wifi_merged_"+real_date+".csv", index=False)
         print("File Wifi_merged_"+real_date+".csv cleaned")
+        i2 = input("Do you want to view the map? (y/n)")
+        if i2 == 'y':
+            data = pd.read_csv("/home/"+user+"/Desktop/d0raCatch/Advance/Done/Cleaned_Wifi_merged_"+real_date+".csv")
+            map = folium.Map(location=[45.4642700, 9.1895100], zoom_start=10)
+            for index, row in data.iterrows():
+                marker = folium.Marker(location=[row['Latitude'], row['Longitude']])
+                popup = folium.Popup(f"<b>MAC:</b><br>{row['MAC']}</br> <b>SSID:</b><br>{row['SSID']}</br> <b>AuthMode:</b><br>{row['AuthMode']}</br> <b>Channel:</b><br>{row['Channel']}</br> <b>RSSI:</b><br>{row['RSSI']}</br>")
+                popup.add_to(marker)
+                marker.add_to(map)
+                marker.add_to(map)
+            map.save("/home/"+user+"/Desktop/d0raCatch/Advance/Map/map"+real_date+".html")
+            print("Map "+real_date+".html saved")
+        else:
+            exit(1)
     else:
         exit(1)
 else:
