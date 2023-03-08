@@ -43,7 +43,11 @@ if i == 'y':
             data = pd.read_csv("/home/"+user+"/Desktop/d0raCatch/Advance/Done/Cleaned_Wifi_merged_"+real_date+".csv")
             map = folium.Map(location=[45.4642700, 9.1895100], zoom_start=10)
             for index, row in data.iterrows():
-                marker = folium.Marker(location=[row['Latitude'], row['Longitude']])
+                if row['AuthMode'] == "[ESS]":
+                    col = 'red'
+                else:
+                    col = 'blue'
+                marker = folium.Marker(location=[row['Latitude'], row['Longitude']], icon=folium.Icon(color=col))
                 popup = folium.Popup(f"<b>MAC:</b><br>{row['MAC']}</br> <b>SSID:</b><br>{row['SSID']}</br> <b>AuthMode:</b><br>{row['AuthMode']}</br> <b>Channel:</b><br>{row['Channel']}</br> <b>RSSI:</b><br>{row['RSSI']}</br>")
                 popup.add_to(marker)
                 marker.add_to(map)
