@@ -42,6 +42,7 @@ if i == 'y':
         if i2 == 'y':
             data = pd.read_csv("/home/"+user+"/Desktop/d0raCatch/Advance/Done/Cleaned_Wifi_merged_"+real_date+".csv")
             map = folium.Map(location=[45.4642700, 9.1895100], zoom_start=10)
+            folium.TileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',name='google maps',attr='Google').add_to(map)
             for index, row in data.iterrows():
                 if row['AuthMode'] == "[ESS]":
                     col = 'red'
