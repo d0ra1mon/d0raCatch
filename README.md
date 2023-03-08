@@ -19,6 +19,7 @@ In the file WifiScan.ino you will find the instructions for the connections, pay
 
 ## How it works
 It essentially scans the networks around you via the Wemos, obtains the position via the GPS and stores them in .csv format on an sd card.
+
 To drop duplicates you should use the file main.py into Advance folder, this script can:
 - Merge all files into a single file, check and drop all duplicates row and save the final result into Done folder.
 - Check and drop all duplicates row of a single file, then save the final result into Done folder.
