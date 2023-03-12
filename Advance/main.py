@@ -19,16 +19,12 @@ real_date = (str(today)+"_"+str(current_time))
 
 i = input("Do you want to merge different file and drop duplicates? (y/n)")
 if i == 'y':
-    # Definisci il percorso dei file CSV da unire
     print("Move all file to merge into ToMerge folder then press ENTER")
     input()
     user = getpass.getuser()
     path = '/home/'+user+'/Desktop/d0raCatch/Advance/ToMerge/*.csv'
-    # Crea una lista dei nomi dei file CSV nel percorso specificato
     all_files = glob.glob(path)
-    # Leggi i file CSV in un singolo DataFrame
     df = pd.concat((pd.read_csv(f) for f in all_files), ignore_index=True)
-    # Salva il DataFrame in un file CSV
     df.to_csv("/home/"+user+"/Desktop/d0raCatch/Advance/Done/Wifi_merged_"+real_date+".csv", index=False)
     print("Files merged")
     i1 = input("Do you want to drop duplicates? (y/n)")
@@ -54,7 +50,7 @@ if i == 'y':
                 elif row['AuthMode'] == "[WPA2-PSK-CCMP+TKIP][ESS]":
                     col = 'green'
                 marker = folium.Marker(location=[row['Latitude'], row['Longitude']], icon=folium.Icon(color=col))
-                popup = folium.Popup(f"<b>MAC:</b><br>{row['MAC']}</br> <b>SSID:</b><br>{row['SSID']}</br> <b>AuthMode:</b><br>{row['AuthMode']}</br> <b>Channel:</b><br>{row['Channel']}</br> <b>RSSI:</b><br>{row['RSSI']}</br>")
+                popup = folium.Popup(f"<b>MAC:</b><br>{row['MAC']}</br> <b>SSID:</b><br>{row['SSID']}</br> <b>AuthMode:</b><br>{row['AuthMode']}</br> <b>Channel:</b><br>{row['Channel']}</br> <b>RSSI:</b><br>{row['RSSI']}</br> <b>LATITUDE:</b><br>{row['Latitude']}</br> <b>LONGITUDE:</b><br>{row['Longitude']}</br>")
                 popup.add_to(marker)
                 marker.add_to(map)
                 marker.add_to(map)
