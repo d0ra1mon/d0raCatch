@@ -48,7 +48,7 @@ if i == 'y':
                 if row['AuthMode'] == "[ESS]":
                     col = 'red'
                 elif row['AuthMode'] == "[WEP][ESS]":
-                    col = 'orange':
+                    col = 'orange'
                 elif row['AuthMode'] == "[WPA-PSK-CCMP+TKIP][ESS]":
                     col = 'yellow'
                 elif row['AuthMode'] == "[WPA2-PSK-CCMP+TKIP][ESS]":
