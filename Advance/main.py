@@ -44,10 +44,15 @@ if i == 'y':
             map = folium.Map(location=[45.4642700, 9.1895100], zoom_start=10)
             folium.TileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',name='google maps',attr='Google').add_to(map)
             for index, row in data.iterrows():
+                #reference: https://www.netspotapp.com/blog/wifi-security/wifi-encryption-and-security.html
                 if row['AuthMode'] == "[ESS]":
                     col = 'red'
-                else:
-                    col = 'blue'
+                elif row['AuthMode'] == "[WEP][ESS]":
+                    col = 'orange':
+                elif row['AuthMode'] == "[WPA-PSK-CCMP+TKIP][ESS]":
+                    col = 'yellow'
+                elif row['AuthMode'] == "[WPA2-PSK-CCMP+TKIP][ESS]":
+                    col = 'green'
                 marker = folium.Marker(location=[row['Latitude'], row['Longitude']], icon=folium.Icon(color=col))
                 popup = folium.Popup(f"<b>MAC:</b><br>{row['MAC']}</br> <b>SSID:</b><br>{row['SSID']}</br> <b>AuthMode:</b><br>{row['AuthMode']}</br> <b>Channel:</b><br>{row['Channel']}</br> <b>RSSI:</b><br>{row['RSSI']}</br>")
                 popup.add_to(marker)
