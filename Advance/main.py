@@ -46,7 +46,7 @@ if i == 'y':
                 elif row['AuthMode'] == "[WEP][ESS]":
                     col = 'orange'
                 elif row['AuthMode'] == "[WPA-PSK-CCMP+TKIP][ESS]":
-                    col = 'yellow'
+                    col = 'lightgreen'
                 elif row['AuthMode'] == "[WPA2-PSK-CCMP+TKIP][ESS]":
                     col = 'green'
                 marker = folium.Marker(location=[row['Latitude'], row['Longitude']], icon=folium.Icon(color=col))
