@@ -1,4 +1,4 @@
-# d0raCarch - Wardriving device
+# d0raCarch V1 - Wardriving device
 <p align="center">
  <img alt="Arduino" src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white">
  <img alt="GitHub" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white">
@@ -36,19 +36,24 @@ Below are some pictures of the device without a case, so that you can understand
 <p align="center"><img src="/image/6.jpg"></p>
 
 ## 3D Case
-Finally, in the 3D folder you will find the two files for 3d printing of the case.
+Finally, in the 3D/Version1 folder you will find the two files for 3d printing of the case.
 <p align="center"><img src="/image/7.png"></p>
 <p align="center"><img src="/image/8.png"></p>
 
-# Advance d0raCatch
+# d0raCatch V2
 <p align="center"><img src="/image/7.jpg"></p>
 
-Requirements:
+## For the creation of this project you will need:
 - [Battery](https://www.amazon.it/dp/B0B7N2T1TD?psc=1&ref=ppx_yo2ov_dt_b_product_details)
 - [Antenna](https://www.amazon.it/dp/B09NXZ35CM?psc=1&ref=ppx_yo2ov_dt_b_product_details)
 - [Connector](https://www.amazon.it/dp/B07YBYMBSV?psc=1&ref=ppx_yo2ov_dt_b_product_details)
 - [Battery Charger](https://www.amazon.it/dp/B0B17R8CMG?psc=1&ref=ppx_yo2ov_dt_b_product_details)
 - [Switch](https://www.amazon.it/dp/B09QQLTQ1C?psc=1&ref=ppx_yo2ov_dt_b_product_details)
+
+## 3D Case
+Finally, in the 3D/Version2 folder you will find the two files for 3d printing of the case.
+<p align="center"><img src="/image/7.png"></p>
+<p align="center"><img src="/image/8.png"></p>
 
 ## Disclaimer
 I recommend using this device for testing, learning and fun :D
