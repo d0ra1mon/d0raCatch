@@ -41,6 +41,7 @@ Finally, in the 3D/Version1 folder you will find the two files for 3d printing o
 <p align="center"><img src="/image/8.png"></p>
 
 # d0raCatch V2
+![version](https://img.shields.io/badge/version-2.0.0-blue)
 <p align="center"><img src="/image/7.jpg"></p>
 
 ## For the creation of this project you will need:
