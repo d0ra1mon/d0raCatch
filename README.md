@@ -47,7 +47,7 @@ Requirements:
 - [Battery](https://www.amazon.it/dp/B0B7N2T1TD?psc=1&ref=ppx_yo2ov_dt_b_product_details)
 - [Antenna](https://www.amazon.it/dp/B09NXZ35CM?psc=1&ref=ppx_yo2ov_dt_b_product_details)
 - [Connector](https://www.amazon.it/dp/B07YBYMBSV?psc=1&ref=ppx_yo2ov_dt_b_product_details)
-- [BatteryCharger](https://www.amazon.it/dp/B0B17R8CMG?psc=1&ref=ppx_yo2ov_dt_b_product_details)
+- [Battery Charger](https://www.amazon.it/dp/B0B17R8CMG?psc=1&ref=ppx_yo2ov_dt_b_product_details)
 - [Switch](https://www.amazon.it/dp/B09QQLTQ1C?psc=1&ref=ppx_yo2ov_dt_b_product_details)
 
 ## Disclaimer
