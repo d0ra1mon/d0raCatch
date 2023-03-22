@@ -52,8 +52,8 @@ Finally, in the 3D/Version1 folder you will find the two files for 3d printing o
 
 ## 3D Case
 Finally, in the 3D/Version2 folder you will find the two files for 3d printing of the case.
-<p align="center"><img src="/image/9.png" width="1000" height="720"></p>
-<p align="center"><img src="/image/10.png" width="1000" height="720"></p>
+<p align="center"><img src="/image/9.png" width="800" height="600"></p>
+<p align="center"><img src="/image/10.png" width="800" height="600"></p>
 
 ## Disclaimer
 I recommend using this device for testing, learning and fun :D
