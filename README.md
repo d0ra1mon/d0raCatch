@@ -2,7 +2,7 @@
 <p align="center">
  <img alt="Arduino" src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white">
  <img alt="GitHub" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white">
- <img alt="Version" src=https://img.shields.io/badge/version-1.0.0-blue)
+ <img alt="Version" src=https://img.shields.io/badge/version-1.0.0-green)
 </p>
 
 Small and pocket-sized, a phrase that is completely misunderstood if taken out of context, I am talking about a Wardriving device.
