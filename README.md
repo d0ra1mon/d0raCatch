@@ -42,7 +42,7 @@ Finally, in the 3D/Version1 folder you will find the two files for 3d printing o
 
 # d0raCatch V2
 <p align="center"> 
- <img src=https://img.shields.io/badge/version-2.0.0-green) 
+ <img alt="Arduino" src=https://img.shields.io/badge/version-2.0.0-green) 
 </p>
 <p align="center"><img src="/image/7.jpg"></p>
 
