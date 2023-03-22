@@ -44,11 +44,11 @@ Finally, in the 3D folder you will find the two files for 3d printing of the cas
 <p align="center"><img src="/image/7.jpg"></p>
 
 Requirements:
-- [Battery] (https://www.amazon.it/dp/B0B7N2T1TD?psc=1&ref=ppx_yo2ov_dt_b_product_details)
-- [Antenna] (https://www.amazon.it/dp/B09NXZ35CM?psc=1&ref=ppx_yo2ov_dt_b_product_details)
-- [Connector] (https://www.amazon.it/dp/B07YBYMBSV?psc=1&ref=ppx_yo2ov_dt_b_product_details)
-- [BatteryCharger] (https://www.amazon.it/dp/B0B17R8CMG?psc=1&ref=ppx_yo2ov_dt_b_product_details)
-- [Switch] (https://www.amazon.it/dp/B09QQLTQ1C?psc=1&ref=ppx_yo2ov_dt_b_product_details)
+- [Battery](https://www.amazon.it/dp/B0B7N2T1TD?psc=1&ref=ppx_yo2ov_dt_b_product_details)
+- [Antenna](https://www.amazon.it/dp/B09NXZ35CM?psc=1&ref=ppx_yo2ov_dt_b_product_details)
+- [Connector](https://www.amazon.it/dp/B07YBYMBSV?psc=1&ref=ppx_yo2ov_dt_b_product_details)
+- [BatteryCharger](https://www.amazon.it/dp/B0B17R8CMG?psc=1&ref=ppx_yo2ov_dt_b_product_details)
+- [Switch](https://www.amazon.it/dp/B09QQLTQ1C?psc=1&ref=ppx_yo2ov_dt_b_product_details)
 
 ## Disclaimer
 I recommend using this device for testing, learning and fun :D
