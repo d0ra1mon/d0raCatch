@@ -40,5 +40,15 @@ Finally, in the 3D folder you will find the two files for 3d printing of the cas
 <p align="center"><img src="/image/7.png"></p>
 <p align="center"><img src="/image/8.png"></p>
 
+## Advance d0raCatch
+<p align="center"><img src="/image/7.jpg"></p>
+
+Requirements:
+- [2000mAh Battery] (https://www.amazon.it/dp/B0B7N2T1TD?psc=1&ref=ppx_yo2ov_dt_b_product_details)
+- [2.4GHz Antenna] (https://www.amazon.it/dp/B09NXZ35CM?psc=1&ref=ppx_yo2ov_dt_b_product_details)
+- [SMA Female] (https://www.amazon.it/dp/B07YBYMBSV?psc=1&ref=ppx_yo2ov_dt_b_product_details)
+- [Battery Charger Module] (https://www.amazon.it/dp/B0B17R8CMG?psc=1&ref=ppx_yo2ov_dt_b_product_details)
+- [Power On/Off Switch] (https://www.amazon.it/dp/B09QQLTQ1C?psc=1&ref=ppx_yo2ov_dt_b_product_details)
+
 ## Disclaimer
 I recommend using this device for testing, learning and fun :D
