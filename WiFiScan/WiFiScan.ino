@@ -122,6 +122,11 @@ void lookForNetworks(double lat, double lng){
 
   if (n == 0) {
     Serial.println(F("No networks found"));
+    display.setFont(ArialMT_Plain_16);
+    Serial.println("Finding Satellites");
+    display.drawString(125, 30, "No networks found");
+    display.display();
+    display.clear();
   }
   else {
     display.clear();
