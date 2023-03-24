@@ -167,8 +167,8 @@ void lookForNetworks(double lat, double lng){
     Serial.print(" ");
     Serial.print(lng, 6);
     Serial.println();
+    display.display();
   }
-  display.display();
 }
 
 void loop(){
