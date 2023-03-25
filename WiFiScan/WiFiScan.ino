@@ -39,7 +39,6 @@ const uint32_t GPSBaud = 9600;
 // Oggetto per gestire le informazioni GPS
 TinyGPSPlus gps;
 static const int RXPin = 2, TXPin = 0;
-//SoftwareSerial ss(RXPin, TXPin); // the serial interface to the GPS device 
 SoftwareSerial ss(RXPin, TXPin); // the serial interface to the GPS device 
 
 String filename = "";
