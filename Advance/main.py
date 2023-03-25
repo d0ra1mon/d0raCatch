@@ -45,7 +45,7 @@ if i == 'y':
         i2 = input("Do you want to view the map? (y/n)")
         if i2 == 'y':
             data = pd.read_csv("/home/"+user+"/Desktop/d0raCatch/Advance/Done/Cleaned_Wifi_merged_"+real_date+".csv")
-            map = folium.Map(location=[45.4642700, 9.1895100], zoom_start=10)
+            map = folium.Map(location=(30, 10), zoom_start=3)
             folium.TileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',name='google maps',attr='Google').add_to(map)
             for index, row in data.iterrows():
                 #reference: https://www.netspotapp.com/blog/wifi-security/wifi-encryption-and-security.html
