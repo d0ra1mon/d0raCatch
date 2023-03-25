@@ -38,7 +38,7 @@ String longitude = "";
 const uint32_t GPSBaud = 9600;
 // Oggetto per gestire le informazioni GPS
 TinyGPSPlus gps;
-static const int RXPin = 0, TXPin = 2;
+static const int RXPin = 2, TXPin = 0;
 //SoftwareSerial ss(RXPin, TXPin); // the serial interface to the GPS device 
 SoftwareSerial ss(RXPin, TXPin); // the serial interface to the GPS device 
 
@@ -119,12 +119,10 @@ void lookForNetworks(double lat, double lng){
 
   int n = WiFi.scanNetworks();
   counter += n;
-
   if (n == 0) {
     Serial.println(F("No networks found"));
     display.setFont(ArialMT_Plain_16);
-    Serial.println("Finding Satellites");
-    display.drawString(125, 30, "No networks found");
+    display.drawString(127, 30, "No networks found");
     display.display();
   }
   else {
@@ -156,7 +154,6 @@ void lookForNetworks(double lat, double lng){
       file.print(String(lat, 6));
       file.print(',');
       file.println(String(lng, 6));
-      //file.close();
     }
     file.close();
     display.drawString(120, 29, String(lat, 6));
