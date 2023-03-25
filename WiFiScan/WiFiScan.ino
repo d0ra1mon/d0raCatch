@@ -122,7 +122,7 @@ void lookForNetworks(double lat, double lng){
   if (n == 0) {
     Serial.println(F("No networks found"));
     display.setFont(ArialMT_Plain_16);
-    display.drawString(130, 30, "No networks");
+    display.drawString(110, 30, "No networks");
     display.display();
   }
   else {
