@@ -131,16 +131,13 @@ void lookForNetworks(double lat, double lng){
     display.drawString(102, 13, "d0raCatch");
     display.setFont(ArialMT_Plain_10);
     display.drawString(46, 29, "Latitude: ");
-    //display.drawString(120, 29, String(gps.location.lat()));
     display.drawString(56, 39, "Longitude: ");
-    //display.drawString(120, 39, String(gps.location.lng()));
     display.drawString(56, 50, "Wifi found: ");
     display.drawString(120, 50, String(counter));
     File file = SD.open(filename, FILE_WRITE);
     for (int8_t i = 0; i < n; i++) {
       WiFi.getNetworkInfo(i, ssid, encryptionType, rssi, bssid, channel, hidden);
       Serial.printf(PSTR("  %02d: [CH %02d] [%02X:%02X:%02X:%02X:%02X:%02X] %ddBm %c %c %s\n"), i, channel, bssid[0], bssid[1], bssid[2], bssid[3], bssid[4], bssid[5], rssi, (encryptionType == ENC_TYPE_NONE) ? ' ' : '*', hidden ? 'H' : 'V', ssid.c_str());
-      //File file = SD.open(filename, FILE_WRITE);
       file.print('['+WiFi.BSSIDstr(i)+']');  
       file.print(',');
       file.print(WiFi.SSID(i));
@@ -211,7 +208,6 @@ void initializeSD() { // create new CSV file and add WiGLE headers
   }
   File file = SD.open(filename, FILE_WRITE);
   if (file) {
-    //file.println("MAC,SSID,AuthMode,FirstSeen,Channel,RSSI,Latitude,Longitude,Type");
     file.println("MAC,SSID,AuthMode,Channel,RSSI,Latitude,Longitude");
 
   }
