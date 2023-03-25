@@ -48,9 +48,6 @@ int networks = 0;
 //counter total wifi found
 int counter = 0;
 
-#define LOG_RATE 500
-char currentTime[5];
-
 SSD1306Wire display(0x3c, SDA, SCL);
 #define SD_CS D8
 
