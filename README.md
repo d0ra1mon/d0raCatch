@@ -47,9 +47,9 @@ Finally, in the 3D/Version1 folder you will find the two files for 3d printing o
  <img alt="GitHub" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white">
  <img alt="Version" src=https://img.shields.io/badge/version-2.0.0-green) 
 </p>
+ 
+ In version 2.0 its design has been changed and an antenna has been added to increase the gps power, making it even more accurate.
 <p align="center"><img src="/image/7.jpg"></p>
-
-In version 2.0 its design has been changed and an antenna has been added to increase the gps power, making it even more accurate.
 
 ## For the creation of this project you will need:
 - [Battery](https://www.amazon.it/dp/B0B7N2T1TD?psc=1&ref=ppx_yo2ov_dt_b_product_details)
