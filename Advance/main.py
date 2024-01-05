@@ -27,15 +27,12 @@ def read_csv_with_error_handling(file_path):
 
 i = input("> Do you want to merge different files and drop duplicates? (y/n)")
 if i == 'y':
-    # Definisci il percorso dei file CSV da unire
     print("> Move all files to merge into ToMerge folder then press ENTER")
     input()
     user = getpass.getuser()
     path = '/home/' + user + '/Desktop/d0raCatch/Advance/ToMerge/*.csv'
-    # Crea una lista dei nomi dei file CSV nel percorso specificato
     all_files = glob.glob(path)
 
-    # Leggi i file CSV in un singolo DataFrame
     dfs = []
     error_files = []
 
@@ -58,7 +55,6 @@ if i == 'y':
         exit(1)
 
     df = pd.concat(dfs, ignore_index=True)
-    # Salva il DataFrame in un file CSV
     df.to_csv("/home/" + user + "/Desktop/d0raCatch/Advance/Done/Wifi_merged_" + real_date + ".csv", index=False)
     print("> Files merged")
 
@@ -77,7 +73,6 @@ if i == 'y':
         folium.TileLayer('stamenterrain').add_to(map)
 
         for index, row in data.iterrows():
-            # reference: https://www.netspotapp.com/blog/wifi-security/wifi-encryption-and-security.html
             if row['AuthMode'] == "[ESS]":
                 col = 'red'
             elif row['AuthMode'] == "[WEP][ESS]":
