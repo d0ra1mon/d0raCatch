@@ -33,11 +33,13 @@
 #include "SSD1306Wire.h"
 #include <string.h>
 
+#define LOG_RATE 500
+
 String latitude = "";
 String longitude = "";
 const uint32_t GPSBaud = 9600;
 // Oggetto per gestire le informazioni GPS
-TinyGPSPlus gps;
+TinyGPSPlus gps ;
 static const int RXPin = 2, TXPin = 0;
 //SoftwareSerial ss(RXPin, TXPin); // the serial interface to the GPS device 
 SoftwareSerial ss(RXPin, TXPin); // the serial interface to the GPS device 
@@ -48,56 +50,62 @@ int networks = 0;
 //counter total wifi found
 int counter = 0;
 
+#define LOG_RATE 500
+char currentTime[5];
+
 SSD1306Wire display(0x3c, SDA, SCL);
 #define SD_CS D8
 
 void setup(){
   Serial.begin(115200);
+  ss.begin(GPSBaud);
   display.init();
   display.flipScreenVertically();
   display.setFont(ArialMT_Plain_16);
   display.setTextAlignment(TEXT_ALIGN_RIGHT);
-  ss.begin(GPSBaud);
-  Serial.print("Initializing SD card...");
+  WiFi.mode(WIFI_STA);
+  WiFi.disconnect();
+  display.drawString(105, 25, "d0raCatch");
+  display.display();
+  delay(2000);
+  display.clear();
+
+  Serial.println("Checking SD...");
   if (!SD.begin(SD_CS)) {
     Serial.println("Initialization SD failed!");
-    display.drawString(105, 17, "SD problem");
+    display.drawString(105, 15, "SD problem");
     display.display();
     delay(500);
     display.clear();
     while (!SD.begin(SD_CS));
   }
   Serial.println("Initialization SD done.");
-  display.drawString(105, 17, "SD detected");
+  display.drawString(105, 15, "SD detected");
   display.display();
-  delay(500);
-  Serial.println("Checking GPS...");
-  checkGPS();
-  display.clear();
-  WiFi.mode(WIFI_STA);
-  WiFi.disconnect();
   initializeSD();
-  display.drawString(127, 30, "Initialization done");
-  display.display(); 
-  delay(1500);
-  display.clear();
-}
-
-void checkGPS(){
-  if (millis() > 5000 && gps.charsProcessed() < 10)
-  {
-    Serial.println(F("No GPS detected: check wiring."));
-    display.drawString(108, 33, "GPS problem");
-    display.display();
-    delay(500);
-    display.clear();
-  }else{
-    Serial.println(F("GPS detected"));
-    display.drawString(108, 33, "Gps detected");
-    display.display();
-    delay(500);
-    display.clear();
+  delay(500);
+  
+  Serial.println("Checking GPS...");
+  if (ss.available() > 0) {
+    display.drawString(105, 35, "GPS detected");
   }
+  else {
+    display.drawString(105, 35, "GPS problem");
+  }
+  display.display();
+  delay(1000);
+  display.clear();
+  while (!gps.location.isValid()) {
+    Serial.println("Finding Satellites");
+    Serial.println(gps.location.lat());
+    Serial.println(gps.location.lng());
+    Serial.println();
+    display.drawString(125, 30, "Finding Satellites");
+    display.display();
+    delay(0);
+    smartDelay(500);
+  }
+  display.clear();
 }
 
 void lookForNetworks(double lat, double lng){
@@ -162,38 +170,20 @@ void lookForNetworks(double lat, double lng){
 }
 
 void loop(){
-  if (ss.available() > 0){
-    if (gps.encode(ss.read())){
-      Serial.print("Date/Time: ");
-      Serial.print(gps.date.month());
-      Serial.print(F("/"));
-      Serial.print(gps.date.day());
-      Serial.print(F("/"));
-      Serial.print(gps.date.year());
-      Serial.print(" ");
-      if (gps.time.hour() < 10) Serial.print(F("0"));
-      Serial.print(gps.time.hour());
-      Serial.print(F(":"));
-      if (gps.time.minute() < 10) Serial.print(F("0"));
-      Serial.print(gps.time.minute());
-      Serial.print(F(":"));
-      if (gps.time.second() < 10) Serial.print(F("0"));
-      Serial.print(gps.time.second());
-      Serial.print(F("."));
-      if (gps.time.centisecond() < 10) Serial.print(F("0"));
-      Serial.print(gps.time.centisecond());
-      Serial.println();
-      lookForNetworks(gps.location.lat(), gps.location.lng());
-      display.clear();
-    }
+  if (gps.location.isValid()) {
+    lookForNetworks(gps.location.lat(), gps.location.lng());
   }
-  else{
-    display.setFont(ArialMT_Plain_16);
-    Serial.println("Finding Satellites");
-    display.drawString(125, 30, "Finding Satellites");
-    display.display();
-    display.clear(); 
-  }
+  smartDelay(LOG_RATE);
+  if (millis() > 5000 && gps.charsProcessed() < 10)
+    Serial.println("No GPS data received: check wiring");
+}
+
+static void smartDelay(unsigned long ms) {
+  unsigned long start = millis();
+  do {
+    while (ss.available())
+      gps.encode(ss.read());
+  } while (millis() - start < ms);
 }
 
 void initializeSD() { // create new CSV file and add WiGLE headers
