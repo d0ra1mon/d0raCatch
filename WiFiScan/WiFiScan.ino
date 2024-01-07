@@ -156,8 +156,6 @@ void lookForNetworks(double lat, double lng){
       file.print(String(lat, 6));
       file.print(',');
       file.println(String(lng, 6));
-      file.print(',');
-      file.print("");
     }
     file.close();
     display.drawString(120, 29, String(lat, 6));
