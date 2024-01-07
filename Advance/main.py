@@ -73,7 +73,7 @@ if i == 'y':
         folium.TileLayer('stamenterrain').add_to(map)
 
         for index, row in data.iterrows():
-            if row['AuthMode'] == "[ESS]":
+            if row['AuthMode'] == "[ESS]" or not pd.isna(row['Password']):
                 col = 'red'
             elif row['AuthMode'] == "[WEP][ESS]":
                 col = 'orange'
@@ -83,7 +83,7 @@ if i == 'y':
                 col = 'green'
             marker = folium.Marker(location=[row['Latitude'], row['Longitude']], icon=folium.Icon(color=col))
             popup = folium.Popup(
-                f"<b>MAC:</b><br>{row['MAC']}</br> <b>SSID:</b><br>{row['SSID']}</br> <b>AuthMode:</b><br>{row['AuthMode']}</br> <b>Channel:</b><br>{row['Channel']}</br> <b>RSSI:</b><br>{row['RSSI']}</br> <b>Latitude:</b><br>{row['Latitude']}</br> <b>Longitude:</b><br>{row['Longitude']}</br>")
+                f"<b>MAC:</b><br>{row['MAC']}</br> <b>SSID:</b><br>{row['SSID']}</br> <b>AuthMode:</b><br>{row['AuthMode']}</br> <b>Channel:</b><br>{row['Channel']}</br> <b>RSSI:</b><br>{row['RSSI']}</br> <b>Latitude:</b><br>{row['Latitude']}</br> <b>Longitude:</b><br>{row['Longitude']}</br> <b>Password:</b><br>{row['Password']}</br>")
             popup.add_to(marker)
             marker.add_to(map)
             marker.add_to(map)
