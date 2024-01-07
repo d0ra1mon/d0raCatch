@@ -156,6 +156,8 @@ void lookForNetworks(double lat, double lng){
       file.print(String(lat, 6));
       file.print(',');
       file.println(String(lng, 6));
+      file.print(',');
+      file.print("");
     }
     file.close();
     display.drawString(120, 29, String(lat, 6));
@@ -195,7 +197,7 @@ void initializeSD() { // create new CSV file and add WiGLE headers
   }
   File file = SD.open(filename, FILE_WRITE);
   if (file) {
-    file.println("MAC,SSID,AuthMode,Channel,RSSI,Latitude,Longitude");
+    file.println("MAC,SSID,AuthMode,Channel,RSSI,Latitude,Longitude,Password");
 
   }
   file.close();
