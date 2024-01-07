@@ -73,7 +73,7 @@ if i == 'y':
         folium.TileLayer('stamenterrain').add_to(map)
 
         for index, row in data.iterrows():
-            if row['AuthMode'] == "[ESS]" or not pd.isna(row['Password']):
+            if row['AuthMode'] == "[ESS]": 
                 col = 'red'
             elif row['AuthMode'] == "[WEP][ESS]":
                 col = 'orange'
@@ -81,12 +81,18 @@ if i == 'y':
                 col = 'lightgreen'
             elif row['AuthMode'] == "[WPA2-PSK-CCMP+TKIP][ESS]":
                 col = 'green'
+
+
+            if not pd.isna(row['Password']):
+                col = 'blue' 
+    
             marker = folium.Marker(location=[row['Latitude'], row['Longitude']], icon=folium.Icon(color=col))
             popup = folium.Popup(
                 f"<b>MAC:</b><br>{row['MAC']}</br> <b>SSID:</b><br>{row['SSID']}</br> <b>AuthMode:</b><br>{row['AuthMode']}</br> <b>Channel:</b><br>{row['Channel']}</br> <b>RSSI:</b><br>{row['RSSI']}</br> <b>Latitude:</b><br>{row['Latitude']}</br> <b>Longitude:</b><br>{row['Longitude']}</br> <b>Password:</b><br>{row['Password']}</br>")
             popup.add_to(marker)
             marker.add_to(map)
             marker.add_to(map)
+
         map.save("/home/" + user + "/Desktop/d0raCatch/Advance/Map/map" + real_date + ".html")
         print("> Map " + real_date + ".html saved")
     else:
